@@ -29,6 +29,16 @@ public class Queue {
 
     }
 
+    // Delete Data From Queue
+    public void deQueue() {
+        if (front != null) {
+            int temp = front.key;
+            front = front.next;
+            length--;
+            return;
+        }
+
+    }
 
     // Print method
     public void display() {
@@ -47,5 +57,10 @@ public class Queue {
         queue.enQueue(30);
         queue.enQueue(70);
         queue.display();
+        System.out.println();
+        System.out.println("After deleting element from the queue");
+        queue.deQueue();
+        queue.display();
+
     }
 }
